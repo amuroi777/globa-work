@@ -1,0 +1,119 @@
+@use '../../../global/' as var;
+
+/* ==========================
+qa
+=========================== */
+.p-service-qa {
+  margin-top: 60px;
+  margin-bottom: 100px;
+
+  @include var.mq(sp) {
+    margin-top: 160px;
+  }
+
+  &__wrapper {
+    @include var.mq(sp) {
+      margin-left: auto;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__items {
+    width: 688px;
+    max-width: 100%;
+    margin: 57px auto 0;
+
+    @include var.mq(sp) {
+      max-width: 100%;
+    }
+  }
+
+  &__item {
+    @include var.mq(sp) {
+      width: 700px;
+    }
+
+    &:nth-child(n + 2) {
+      margin-top: 24px;
+    }
+  }
+
+  &__box {
+    border-bottom: 1px solid var.$bg-border-bottom;
+  }
+
+  &__box-q {
+    position: relative;
+    padding: 32px 56px 32px 20px;
+    font-weight: 700;
+    color: var.$c-main-dark;
+    background: var.$bg-thin;
+
+    @include var.mq(lg) {
+      font-size: 2rem;
+    }
+  }
+
+  &__box-icon {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    width: 14px;
+    height: 14px;
+    transform: translateY(-50%);
+  }
+
+  &__box-bar1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 2px;
+    background: var.$bg-dark;
+    border-radius: 20px;
+    transform: translateY(-50%);
+
+    &::after {
+      color: #e61264;
+      transition: 0.5s;
+    }
+  }
+
+  &__box-bar2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 14px;
+    background: var.$bg-dark;
+    border-radius: 20px;
+    transition: 0.3s;
+    transform: translateX(-50%);
+  }
+
+  &__box-a {
+    display: none;
+    padding: 16px 30px 16px 20px;
+    font-size: 1.4rem;
+    background: var.$bg-thin;
+  }
+
+  &__box-content {
+    position: relative;
+    padding-left: 35px;
+  }
+}
+
+.is-active {
+  color: #e61264;
+
+  .p-service-qa__box-bar2 {
+    transition: 0.3s;
+    transform: rotate(-270deg);
+  }
+}

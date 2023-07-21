@@ -1,0 +1,98 @@
+@use '../../../global/' as var;
+
+/* ==========================
+download
+=========================== */
+.p-download-success {
+  margin-top: 111px;
+
+  @include var.mq(sp) {
+    margin: 90px 0 100px;
+  }
+
+  &__wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__container {
+    padding: 0 20px;
+  }
+
+  &__items {
+    display: block;
+
+    @include var.mq(sp) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__document {
+    width: 100%;
+
+    @include var.mq(sp) {
+      width: calc(50% - 40px);
+    }
+  }
+
+  &__document-title {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.429;
+
+    @include var.mq(sp) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__document-img {
+    max-width: 275px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__document-text {
+    margin: 40px 0 60px;
+    font-size: 1.4rem;
+    line-height: 1.714;
+  }
+
+  &__form {
+    width: 100%;
+    padding: 40px;
+    margin-bottom: 100px;
+    background: var.$bg-form;
+
+    @include var.mq(sp) {
+      width: 50%;
+      margin-top: 60px;
+    }
+  }
+
+  &__form-top-title {
+    margin-bottom: 41px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    white-space: nowrap;
+
+    @include var.mq(lg) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__form-p {
+    font-size: 1.4rem;
+    line-height: 1.714;
+
+    @include var.mq(sp) {
+      white-space: no-wrap;
+    }
+  }
+
+  &__form-link {
+    color: var.$c-main;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,76 @@
+@use '../../../global/' as var;
+
+/* ==========================
+company-profile
+=========================== */
+.p-about-company-profile {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 80px 0;
+  margin-top: 120px;
+  background: url('../../img/bg-case.jpeg') no-repeat center / cover;
+
+  &__wrapper {
+    max-width: 848px;
+    margin: 0 auto;
+  }
+
+  &__box {
+    padding-top: 60px;
+    margin: 0 20px;
+    background: var.$bg-thin;
+
+    @include var.mq(xl) {
+      padding: 60px 40px 80px;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-left: 20px;
+  }
+
+  &__dd {
+    width: calc(70.93%);
+    padding: 24px 0;
+    padding-left: 36px;
+    font-size: 1.4rem;
+    text-align: center;
+    border-top: 1px solid var.$c-border-about;
+
+    &:last-of-type {
+      border-bottom: 1px solid var.$c-border-about;
+    }
+
+    @include var.mq(sp) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__dt {
+    display: flex;
+    align-items: center;
+    width: calc(29.07%);
+    font-size: 1.4rem;
+    border-top: 1px solid #023e78;
+
+    &:last-of-type {
+      border-bottom: 1px solid #023e78;
+    }
+
+    @include var.mq(sp) {
+      // padding: 0;
+      padding-left: 32px;
+    }
+  }
+}

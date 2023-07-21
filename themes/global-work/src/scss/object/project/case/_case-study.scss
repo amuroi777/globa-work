@@ -1,0 +1,48 @@
+@use '../../../global/' as var;
+
+/* ==========================
+case-study
+=========================== */
+.p-case-study {
+  margin: 90px 0;
+
+  @include var.mq(sp) {
+    margin: 80px 0;
+  }
+
+  &__wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__nav {
+    margin: 0 40px;
+  }
+
+  &__nav-lists {
+    display: block;
+
+    @include var.mq(lg) {
+      display: flex;
+    }
+  }
+
+  &__nav-list {
+    margin-bottom: 20px;
+
+    @include var.mq(xl) {
+      &:not(:first-child) {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__nav-link {
+    display: block;
+    padding: 12px 48px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    background: var.$c-gray-dark;
+  }
+}

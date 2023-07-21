@@ -1,0 +1,356 @@
+@use '../../../global/' as var;
+
+/* ==========================
+about
+=========================== */
+.p-index-about {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 14%;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    max-width: 100%;
+    height: 110%;
+    content: '';
+    background: linear-gradient(transparent 20.5%, #edf3f8 20.5%);
+    transform: skewY(10deg);
+    transform-origin: top right;
+
+    @include var.mq(xl) {
+      &::after {
+        top: 18%;
+        height: 100%;
+      }
+    }
+
+    @include var.mq(xxl) {
+      top: 38%;
+      height: 82%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 115px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 410px;
+    bottom: 0;
+    z-index: -1;
+    background: url('../../img/about-bg.jpeg') top right / 91% no-repeat;
+
+    @include var.mq(xl) {
+      top: 0;
+    }
+  }
+
+  &__content-bg {
+    right: 0;
+    display: block;
+    width: 362px;
+    height: 100px;
+    height: 362px;
+    margin-top: 150px;
+
+    @include var.mq(sp) {
+      top: 79%;
+      width: 43%;
+      height: 600px;
+    }
+
+    @include var.mq(xl) {
+      // height: 775px;
+    }
+
+    @include var.mq(xxl) {
+      top: 0;
+
+      // height: 835px;
+    }
+  }
+
+  &__section-inner {
+    margin: 0 30px;
+
+    @include var.mq(sp) {
+      margin: 0 90px;
+    }
+
+    @include var.mq(xl) {
+      margin-top: 130px;
+    }
+  }
+
+  &__section-heading {
+    display: block;
+    color: var.$c-main;
+
+    @include var.mq(xl) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__heading-title {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 5rem;
+
+    @include var.mq(xl) {
+      font-size: 10rem;
+    }
+  }
+
+  &__heading-lead {
+    font-weight: 700;
+
+    @include var.mq(xl) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__test {
+    padding-top: 30px;
+  }
+
+  &__heading-link-text-top {
+    display: none;
+
+    @include var.mq(xxl) {
+      display: inline-block;
+      padding-right: 20px;
+      font-size: 3.2rem;
+      color: var.$c-main-thin;
+    }
+  }
+
+  &__heading-link-arrow--white {
+    display: none;
+
+    @include var.mq(sp) {
+      right: 14%;
+    }
+
+    @include var.mq(xl) {
+      top: 34%;
+      right: 8%;
+      width: 95px;
+    }
+
+    @include var.mq(xxl) {
+      top: 37%;
+      right: 11%;
+      z-index: -1;
+      display: inline-block;
+      height: 2px;
+      background: var.$bg-thin;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      position: absolute;
+      right: 4px;
+      bottom: -2px;
+      z-index: -1;
+      display: inline-block;
+      width: 2px;
+      height: 14px;
+      content: '';
+      background: var.$bg-thin;
+      transform: rotate(-55deg);
+    }
+  }
+
+  &__items {
+    display: block;
+
+    @include var.mq(sp) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+  }
+
+  &__text {
+    width: auto;
+    margin-top: 50px;
+    font-size: 14px;
+
+    @include var.mq(sp) {
+      width: calc(36.27% - 40px / 2);
+    }
+  }
+
+  &__img-wrapper {
+    width: 335px;
+    max-width: 100%;
+    margin-top: 72px;
+
+    @include var.mq(sm) {
+      margin-top: 124px;
+    }
+
+    @include var.mq(sf) {
+      margin-right: 100px;
+    }
+
+    @include var.mq(xl) {
+      position: relative;
+      width: calc(63.73% - 40px / 2);
+      margin-top: 30px;
+      margin-right: 0;
+    }
+
+  }
+
+  &__img {
+    @include var.mq(sp) {
+      width: 120%;
+    }
+
+    @include var.mq(sf) {
+      width: 130%;
+    }
+
+    @include var.mq(xl) {
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: top;
+    }
+  }
+
+  .hidden-pc {
+    display: block;
+
+    @include var.mq(xl) {
+      display: none;
+    }
+  }
+
+  .hidden-sp {
+    display: none;
+
+    @include var.mq(xl) {
+      display: block;
+    }
+  }
+
+  &__head-link {
+    position: relative;
+
+    @include var.mq(sm) {
+      display: none;
+    }
+
+    @include var.mq(xl) {
+      &::before {
+        position: absolute;
+        top: 12%;
+        right: -8%;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-left: -22px;
+        content: '';
+        border-color: var.$c-accent-yellow;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__head-link-bottom {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+
+    @include var.mq(sp) {
+      padding-top: 30px;
+    }
+
+    @include var.mq(xxl) {
+      display: none;
+    }
+  }
+
+  &__link-text-bottom {
+    position: relative;
+    display: block;
+    padding-left: 120px;
+    font-size: 2rem;
+    color: var.$c-main-thin;
+
+    @include var.mq(sm) {
+      padding-left: 150px;
+    }
+
+    @include var.mq(sp) {
+      padding-left: 520px;
+      font-size: 2.4rem;
+    }
+
+    @include var.mq(sf) {
+      padding-left: 598px;
+    }
+
+    @include var.mq(lg) {
+      padding-left: 650px;
+    }
+
+    @include var.mq(xl) {
+      padding-left: 840px;
+    }
+  }
+
+  &__link-arrow--white-bottom {
+    width: 64.5px;
+    height: 2px;
+    margin-left: 15px;
+    background: var.$c-main-thin;
+    transform: translateY(-50%);
+
+    &::before {
+      position: absolute;
+      right: 4px;
+      bottom: -2px;
+      display: inline-block;
+      width: 2px;
+      height: 14px;
+      content: '';
+      background: var.$c-main-thin;
+      transform: rotate(-55deg);
+    }
+
+    @include var.mq(sf) {
+      right: 25%;
+    }
+
+    @include var.mq(xxl) {
+      display: none;
+    }
+  }
+
+  &__link-border-bottom {
+    width: 40px;
+    height: 40px;
+    margin-left: -22px;
+    border-color: var.$c-accent-yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+
+    @include var.mq(xxl) {
+      display: none;
+    }
+  }
+}

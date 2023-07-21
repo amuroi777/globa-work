@@ -1,0 +1,18 @@
+{
+  "port": 8585,
+  "env": {
+    "tests": { "port": 8686 }
+  },
+  "core": "https://ja.wordpress.org/latest-ja.zip",
+  "themes": ["./themes/global-work", "./themes/test"],
+  "mappings": {
+    "wp-contents/uploads": "./uploads",
+    "sql": "./sql"
+  },
+  "plugins": [
+    "https://downloads.wordpress.org/plugin/custom-post-type-ui.zip",
+    "https://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
+    "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.zip",
+    "https://downloads.wordpress.org/plugin/mw-wp-form.4.4.1.zip"
+  ]
+}

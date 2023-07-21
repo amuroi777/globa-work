@@ -1,0 +1,47 @@
+@use '../global/' as var;
+
+/* ==========================
+footer
+=========================== */
+.l-footer {
+  padding: 65px 0 12px;
+  background: #1a1a1a;
+
+  &__logo {
+    max-width: 282px;
+    margin: auto;
+
+    @include var.mq(xl) {
+      display: block;
+      max-width: 375px;
+      margin: 0 auto;
+    }
+  }
+
+  &__info {
+    margin-top: 23px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__info-text {
+    display: inline-block;
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  &__info-text-middle {
+    margin: 10px 0;
+  }
+
+  &__copyright {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+
+    @include var.mq(xl) {
+      font-size: 1.4rem;
+    }
+  }
+}

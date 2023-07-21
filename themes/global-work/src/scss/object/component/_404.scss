@@ -1,0 +1,70 @@
+@use '../../global/' as var;
+
+/* ==========================
+button
+=========================== */
+.c-entry-404 {
+	padding-bottom: 85px;
+	text-align: center;
+
+  &__wrapper {
+    padding: 0 25px;
+  }
+
+  &__container {
+    padding-top: 80px;
+  }
+
+  &__head {
+  color: var.$c-main;
+  font-family: "Lato", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 36px;
+
+  @include var.mq(lg) {
+    font-size: 8rem;
+   }
+  }
+
+  &__head span::after {
+  content: " ";
+  }
+
+  &__lead {
+  color: var.$c-gray;
+  font-family: "HiraKakuPro-W6", "ヒラギノ角ゴ Pro W6", "Meiryo", "Meiryo", "Noto Sans Japanese", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+
+  @include var.mq(xl) {
+    font-size: 3rem;
+   }
+  }
+
+  &__lead .m_sp {
+  display: none;
+  }
+
+  &__content {
+  color: var.$c-gray-middle;
+  }
+
+  &__btn {
+  margin-top: 58px;
+  }
+
+  &__btn .btn {
+  background: #ebebeb;
+  color: var.$c-gray;
+  padding: 13px;
+  border-radius: 15px;
+  }
+
+  &__btn .btn:hover {
+  background: #ccc;
+  opacity: 1;
+  }
+}

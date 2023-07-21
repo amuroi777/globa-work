@@ -1,0 +1,41 @@
+@use '../../global/' as var;
+
+/* ==========================
+button
+=========================== */
+.c-button-primary {
+  display: block;
+  max-width: 384px;
+  padding: 25px 10px;
+  margin: 60px auto 90px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #023e78;
+  text-align: center;
+  border: 1px solid rgb(2 62 120 / 100%);
+
+  @include var.mq(sp) {
+    margin-bottom: 62px;
+    font-size: 14px;
+  }
+
+  &:hover {
+    background: var.$c-main;
+    color: var.$c-main-thin;
+    transition: 1s;
+  }
+}
+
+.c-button-icon-arrow {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 40%;
+    right: 22px;
+    width: 20px;
+    height: 13px;
+    content: '';
+    background: url('../../img/icon-arrow-right04.svg') no-repeat center / cover;
+  }
+}

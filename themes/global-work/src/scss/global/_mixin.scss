@@ -1,0 +1,10 @@
+@use './variables' as var;
+
+// メディアクエリー
+@mixin mq($breakpoint) {
+  @if map-has-key(var.$breakpoints, $breakpoint) {
+    @media #{inspect(map-get(var.$breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+}

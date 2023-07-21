@@ -1,0 +1,114 @@
+@use '../global/' as var;
+
+/* ==========================
+footer-links
+=========================== */
+.l-footer-links {
+  @include var.mq(sp) {
+    margin-top: 120px;
+  }
+
+  @include var.mq(xl) {
+    display: flex;
+  }
+
+  &__item-download {
+    position: relative;
+    width: 100%;
+    background: url('../../img/img-download.jpeg') no-repeat center center / cover;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: rgb(0 87 172 / 80%);
+    }
+
+    @include var.mq(xl) {
+      width: 50%;
+      padding: 45px 40px 26px;
+    }
+  }
+
+  &__main {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 25px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__en {
+    padding-top: 45px;
+    font-size: 4rem;
+    color: #fff;
+
+    @include var.mq(sp) {
+      font-size: 6rem;
+    }
+  }
+
+  &__jp {
+    font-weight: 700;
+    color: #fff;
+  }
+
+  &__button {
+    display: block;
+    max-width: 315px;
+    max-width: 295px;
+    padding: 25px 10px;
+    margin: 38px auto 0;
+    font-weight: 700;
+    color: #fff400;
+    border: 2px solid #fff400;
+
+    &:hover {
+      color: #000;
+      background: #fff400;
+      transition: 1s;
+    }
+
+    @include var.mq(sp) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__button-arrow {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 45%;
+      left: 88%;
+      width: 20.24px;
+      height: 13.5px;
+      content: '';
+      background: url('../../img/icon-arrow-right01.svg') no-repeat center / cover;
+    }
+  }
+
+  &__item-contact {
+    position: relative;
+    width: 100%;
+    background: url('../../img/img-contact.jpeg') no-repeat center center / cover;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: rgb(2 62 120 / 80%);
+    }
+
+    @include var.mq(xl) {
+      width: 50%;
+      padding: 45px 40px 26px;
+    }
+  }
+}

@@ -1,0 +1,342 @@
+@use '../../../global/' as var;
+
+/* ==========================
+service
+=========================== */
+.p-index-service {
+  position: relative;
+  margin-top: 220px;
+
+  &::after {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 73%;
+    content: '';
+    background: linear-gradient(transparent 20.5%, #edf3f8 20.5%);
+    transform: skewY(10deg);
+    transform-origin: top right;
+
+    @include var.mq(xl) {
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 70%;
+        content: '';
+        background: linear-gradient(transparent 20.5%, #edf3f8 20.5%);
+        transform: skewY(10deg);
+        transform-origin: top right;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin: 0 20px 0 35px;
+
+    @include var.mq(sp) {
+      margin: 0 90px;
+    }
+  }
+
+  &__section-heading {
+    display: block;
+
+    @include var.mq(sp) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var.$c-main;
+    }
+  }
+
+  &__main {
+    color: var.$c-main;
+  }
+
+  &__heading-title {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 5.2rem;
+
+    @include var.mq(sp) {
+      font-size: 10rem;
+    }
+  }
+
+  &__heading-lead {
+    font-size: 24px;
+    font-weight: 700;
+
+    @include var.mq(sp) {
+      font-size: 16px;
+    }
+  }
+
+  &__link-arrow--white {
+    width: 64.5px;
+    height: 2px;
+    margin-left: 15px;
+    background: var.$c-main;
+    transform: translateY(-50%);
+
+    &::before {
+      position: absolute;
+      right: 4px;
+      bottom: -2px;
+      display: inline-block;
+      width: 2px;
+      height: 14px;
+      content: '';
+      background: var.$c-main;
+      transform: rotate(-55deg);
+    }
+
+    @include var.mq(sf) {
+      right: 25%;
+    }
+  }
+
+  &__items {
+    display: block;
+    margin-top: 62px;
+
+    @include var.mq(xl) {
+      display: box;
+      display: flexbox;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 82px;
+    }
+
+    @include var.mq(sp) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+
+    @include var.mq(lg) {
+      &:nth-child(3) {
+        margin-top: 70px;
+      }
+    }
+
+    @include var.mq(sp) {
+      width: calc(33.333% - 12.72% / 3);
+
+      &:nth-child(2) {
+        margin-top: 70px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 140px;
+      }
+    }
+  }
+
+  &__item-img {
+    position: relative;
+    text-align: center;
+  }
+
+  &__item-number {
+    position: absolute;
+    top: -31px;
+    right: -2px;
+    width: 110px;
+  }
+
+  &__item-title {
+    position: absolute;
+    bottom: 33px;
+    left: -20px;
+    font-weight: 700;
+    color: var.$c-main;
+    text-align: left;
+
+    @include var.mq(xl) {
+      bottom: 33px;
+      left: -25px;
+      text-align: left;
+    }
+  }
+
+  &__item-title-inside {
+    display: inline-block;
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: var.$c-main-thin;
+
+    @include var.mq(sp) {
+      font-size: 2rem;
+    }
+
+    @include var.mq(xxl) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__item-title-outside {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var.$c-main;
+    background: var.$bg-thin;
+
+    @include var.mq(sp) {
+      font-size: 2rem;
+    }
+
+    @include var.mq(xxl) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__item-text {
+    padding-bottom: 74px;
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  &__link-text {
+    display: none;
+
+    @include var.mq(xxl) {
+      display: block;
+      padding-right: 140px;
+      font-size: 32px;
+      color: var.$c-main-dark;
+    }
+  }
+
+  &__link-arrow--black {
+    display: none;
+
+    @include var.mq(xxl) {
+      position: absolute;
+      top: 8%;
+      right: 8%;
+      z-index: -1;
+      display: block;
+      width: 95px;
+      height: 2px;
+      background: var.$bg-dark;
+      transform: translateY(-50%);
+
+      &::before {
+        position: absolute;
+        right: 4px;
+        bottom: -2px;
+        z-index: -1;
+        display: inline-block;
+        width: 2px;
+        height: 14px;
+        content: '';
+        background: var.$bg-dark;
+        transform: rotate(-55deg);
+      }
+    }
+  }
+
+  &__link-border {
+    display: none;
+
+    @include var.mq(xxl) {
+      position: absolute;
+      top: 40%;
+      top: 8%;
+      right: 7%;
+      z-index: -2;
+      display: block;
+      width: 50px;
+      width: 40px;
+      height: 51px;
+      height: 40px;
+      background: var.$bg-yellow;
+      border-color: var.$c-accent-yellow;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__head-link-bottom {
+    display: flex;
+    align-items: center;
+
+    @include var.mq(xxl) {
+      display: none;
+    }
+  }
+
+  &__link-text-bottom {
+    position: relative;
+    display: block;
+    padding-left: 120px;
+    margin-left: -15px;
+    font-size: 2rem;
+    color: var.$c-main;
+
+    @include var.mq(sm) {
+      padding-left: 150px;
+    }
+
+    @include var.mq(sp) {
+      padding-left: 400px;
+    }
+
+    @include var.mq(lg) {
+      padding-left: 550px;
+      font-size: 2.4rem;
+    }
+
+    @include var.mq(xl) {
+      padding-left: 670px;
+    }
+  }
+
+  &__link-arrow--white-bottom {
+    width: 64.5px;
+    height: 2px;
+    margin-top: 13px;
+    margin-left: 15px;
+    background: var.$c-main;
+    transform: translateY(-50%);
+
+    &::before {
+      position: absolute;
+      right: 4px;
+      bottom: -2px;
+      display: inline-block;
+      width: 2px;
+      height: 14px;
+      content: '';
+      background: var.$c-main;
+      transform: rotate(-55deg);
+    }
+
+    @include var.mq(sf) {
+      right: 25%;
+    }
+  }
+
+  &__link-border-bottom {
+    width: 40px;
+    height: 40px;
+    margin-left: -22px;
+    background: var.$c-accent-yellow;
+    border-color: var.$c-accent-yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+  }
+}

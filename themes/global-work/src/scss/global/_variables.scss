@@ -1,0 +1,26 @@
+// フォント
+$font-family-default: ' 游ゴシック', yugothic, 'ヒラギノ角ゴ ProN W3',
+  ' Hiragino Kaku Gothic ProN', 'メイリオ', meiryo, 'Droid Sans', sans-serif;
+$font-family-english: 'Montserrat', sans-serif;
+
+// レイアウト幅
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+
+// $breakpoints: (
+$breakpoints: (
+  'sm': (min-width: 411px,
+),
+'md': (min-width: 576px,
+),
+'sp': (min-width: 768px,
+),
+'sf': (min-width: 911px,
+),
+'lg': (min-width: 992px,
+),
+'xl': (min-width: 1200px,
+),
+'xxl': (min-width: 1400px,
+),
+) !default;

@@ -1,0 +1,95 @@
+@use '../../../global/' as var;
+
+/* ==========================
+contents
+=========================== */
+.p-news-details-contents {
+  &__wrapper {
+    padding: 0 20px;
+
+    @include var.mq(xl) {
+      display: flex;
+    }
+  }
+
+  &__container {
+    @include var.mq(xl) {
+      max-width: 1180px;
+      width: 100%;
+    }
+  }
+
+  &__single {
+    margin-top: 92px;
+
+    @include var.mq(xl) {
+      width: calc(85.91% - 40px / 2);
+      margin: 92px auto;
+    }
+  }
+
+  &__body {
+    margin-left: auto;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__cat {
+    padding: 6px 11px;
+    font-size: 1.2rem;
+    color: var.$bg-accent-pink;
+    border: 1px solid var.$bg-accent-pink;
+  }
+
+  &__single-title {
+    margin: 8px 0 24px;
+  }
+
+  &__single-content h2 {
+    padding: 6px 10px 6px 20px;
+    margin: 47px 0 30px;
+    font-size: 2rem;
+    background: var.$c-gray-light;
+    border-left: 6px solid var.$c-main;
+  }
+
+  &__single-content h3 {
+    padding-bottom: 5px;
+    margin: 40px 0 27px;
+    font-size: 1.8rem;
+    border-bottom: 1px solid var.$c-main;
+  }
+
+  &__wp-block-quote {
+    position: relative;
+    padding: 32px 28px;
+    margin-top: 40px;
+    background: var.$c-gray-light;
+    border-left: 4px solid var.$c-main;
+  }
+
+  &__post-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  &__post-link {
+    padding: 8px 16px;
+    border: 1px solid var.$c-main;
+    border-radius: 8px;
+    display: inline-block;
+    color: var.$c-main;
+    font-weight: 700;
+
+    a {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var.$c-main;
+    }
+  }
+}
